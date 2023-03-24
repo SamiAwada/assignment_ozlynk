@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { LandingPage } from "./pages";
+import { EmployeePage, LandingPage } from "./pages";
 import { MainLayout } from "./layouts";
 
 function App() {
@@ -9,12 +9,7 @@ function App() {
       <MainLayout>
         <Routes>
           <Route exact path="/" index element={<LandingPage />} />
-          <Route
-            exact
-            path="/Employee"
-            index
-            element={<div>addEmployee</div>}
-          />
+          <Route exact path="/Employee" index element={<EmployeePage />} />
         </Routes>
       </MainLayout>
     </div>
