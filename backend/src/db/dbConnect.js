@@ -1,16 +1,20 @@
-const { Client } = require("pg");
+const { Pool } = require("pg");
 
-const db = new Client({
+var dbConnection = new Pool({
   user: "postgres",
   host: "localhost",
   database: "postgres",
   password: "postgres",
-  port: 5432
+  port: 5432,
+  max: 20,
+  connectionTimeoutMillis: 2000,
+  idleTimeoutMillis: 2000
 });
 
-db.connect(function (err) {
-  if (err) throw err;
-  console.log("Connected!");
+dbConnection.on("error", (err, client) => {
+  console.error("Unexpected error on idle client", err);
 });
 
-module.exports = db;
+dbConnection.on("release", (err, client) => client);
+
+module.exports = dbConnection;
