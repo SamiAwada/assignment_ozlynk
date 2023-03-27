@@ -1,17 +1,16 @@
 import React from "react";
- import { Formik, Field, Form, ErrorMessage } from "formik";
+ import { Formik } from "formik";
  import * as Yup from "yup";
  import { Label, TextInput } from "flowbite-react";
+ import axiosInstance from "../../axios-instance";
 
  const addEmployeeSchema = Yup.object({
-   firstName: Yup.string()
+   name: Yup.string()
      .max(15, "Must be 15 characters or less")
      .required("Required"),
-   lastName: Yup.string()
-     .max(20, "Must be 20 characters or less")
-     .required("Required"),
    email: Yup.string().email("Invalid email address").required("Required"),
-   phoneNumber: Yup.number("").required("Required")
+   phoneNumber: Yup.number("").required("Required"),
+   salary: Yup.number("").required("Required")
  });
 
  const index = () => {
@@ -21,16 +20,25 @@ import React from "react";
          <div className="p-4 border-2 text-black  rounded-lg bg-gray-900  mt-14">
            <Formik
              initialValues={{
-               firstName: "",
-               lastName: "",
+               name: "",
                email: "",
-               phoneNumber: ""
+               phoneNumber: "",
+               salary: ""
              }}
              validationSchema={addEmployeeSchema}
              validateOnChange={false}
+             validateOnBlur={false}
              onSubmit={(values, { setSubmitting }) => {
+               console.log("values : ", values);
                setTimeout(() => {
-                 alert(JSON.stringify(values, null, 2));
+                 axiosInstance
+                   .post("/employee/add", values)
+                   .then((res) => {
+                     console.log("RES : ", res);
+                   })
+                   .catch((err) => {
+                     console.log("ERROR : ", err.name);
+                   });
                  setSubmitting(false);
                }, 400);
              }}
@@ -42,40 +50,20 @@ import React from "react";
                >
                  <div>
                    <div className="mb-2 block">
-                     <Label htmlFor="firstName" value="First Name" />
-                     {formik.touched.firstName && formik.errors.firstName ? (
+                     <Label htmlFor="name" value="Full Name" />
+                     {formik.touched.name && formik.errors.name ? (
                        <span className="text-sm  font-bold text-red-400">
-                         {" * " + formik.errors.firstName}
+                         {" * " + formik.errors.name}
                        </span>
                      ) : (
                        ""
                      )}
                    </div>
                    <TextInput
-                     id="firstName"
+                     id="name"
                      type="text"
-                     placeholder="jack"
-                     required={true}
-                     {...formik.getFieldProps("firstName")}
-                   />
-                 </div>
-                 <div>
-                   <div className="mb-2 block">
-                     <Label htmlFor="lastName" value="Last Name" />
-                     {formik.touched.lastName && formik.errors.lastName ? (
-                       <span className="text-sm  font-bold text-red-400">
-                         {" * " + formik.errors.lastName}
-                       </span>
-                     ) : (
-                       ""
-                     )}
-                   </div>
-                   <TextInput
-                     id="lastName"
-                     type="text"
-                     placeholder="jack"
-                     required={true}
-                     {...formik.getFieldProps("lastName")}
+                     placeholder="jack jony"
+                     {...formik.getFieldProps("name")}
                    />
                  </div>
                  <div>
@@ -94,7 +82,6 @@ import React from "react";
                      id="phoneNumber"
                      type="number"
                      placeholder="71283827"
-                     required={true}
                      {...formik.getFieldProps("phoneNumber")}
                    />
                  </div>
@@ -111,13 +98,32 @@ import React from "react";
                    </div>
                    <TextInput
                      id="email"
-                     type="email"
+                     type="text"
+                     formNoValidate={true}
                      placeholder="jack100@gmail.com"
-                     required={true}
                      {...formik.getFieldProps("email")}
                    />
                  </div>
-                 <div className="text-gray-200 text-md my-4 w-fit bg-gray-600 p-2 px-4 rounded-xl">
+                 <div>
+                   <div className="mb-2 block">
+                     <Label htmlFor="salary" value="Salary" />
+                     {formik.touched.salary && formik.errors.salary ? (
+                       <span className="text-sm  font-bold text-red-400">
+                         {" * " + formik.errors.salary}
+                       </span>
+                     ) : (
+                       ""
+                     )}
+                   </div>
+                   <TextInput
+                     id="salary"
+                     type="number"
+                     formNoValidate={true}
+                     placeholder="900"
+                     {...formik.getFieldProps("salary")}
+                   />
+                 </div>
+                 <div className="text-gray-200 text-md my-4 w-fit bg-gray-700 hover:bg-gray-600 transition p-2 px-4 rounded-xl">
                    <button type="submit  self-start dark:bg-gray-300">
                      Submit
                    </button>
