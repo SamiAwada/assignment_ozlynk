@@ -3,7 +3,8 @@ import React from "react";
  import * as Yup from "yup";
  import { Label, TextInput } from "flowbite-react";
  import axiosInstance from "../../axios-instance";
-
+ import { useSelector, useDispatch } from "react-redux";
+ import { handleAlert } from "../../store/reducers/alert";
  const addEmployeeSchema = Yup.object({
    name: Yup.string()
      .max(15, "Must be 15 characters or less")
@@ -13,7 +14,10 @@ import React from "react";
    salary: Yup.number("").required("Required")
  });
 
- const index = () => {
+ const Index = () => {
+   //  const count = useSelector((state) => state.counter.value);
+   const dispatch = useDispatch();
+
    return (
      <div className="relative w-full h-full">
        <div className="p-4 sm:ml-64">
@@ -35,9 +39,19 @@ import React from "react";
                    .post("/employee/add", values)
                    .then((res) => {
                      console.log("RES : ", res);
+                     if (res.data.warning) {
+                       dispatch(
+                         handleAlert({ type: "warning", msg: res.data.msg })
+                       );
+                     } else {
+                       dispatch(
+                         handleAlert({ type: "success", msg: res.data.msg })
+                       );
+                     }
                    })
                    .catch((err) => {
-                     console.log("ERROR : ", err.name);
+                     console.log("ERROR : ", err.msg);
+                     dispatch(handleAlert({ type: "failure", msg: err.msg }));
                    });
                  setSubmitting(false);
                }, 400);
@@ -137,4 +151,4 @@ import React from "react";
    );
  };
 
-export default index;
+ export default Index;
