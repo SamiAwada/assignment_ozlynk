@@ -6,15 +6,13 @@ var dbConnection = new Pool({
   database: "postgres",
   password: "postgres",
   port: 5432,
-  max: 20,
+  max: 30,
+  min: 0,
   connectionTimeoutMillis: 2000,
-  idleTimeoutMillis: 2000
+  idleTimeoutMillis: 100,
+  allowExitOnIdle: true
 });
 
-dbConnection.on("error", (err, client) => {
-  console.error("Unexpected error on idle client", err);
-});
 
-dbConnection.on("release", (err, client) => client);
 
 module.exports = dbConnection;
