@@ -5,7 +5,7 @@ import { MainLayout } from "./layouts";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App h-full">
       <MainLayout>
         <Routes>
           <Route exact path="/" index element={<LandingPage />} />
