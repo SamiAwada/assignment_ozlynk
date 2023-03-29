@@ -1,3 +1,3 @@
 import DataTable from "./dataTable/index";
-
-export { DataTable };
+import Alert from "./alert/index";
+export { DataTable, Alert };
