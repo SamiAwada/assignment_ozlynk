@@ -146,7 +146,7 @@ const Index = () => {
           />
         </div>
       </div>
-      <div className="relative h-[400px] overflow-y-scroll">
+      <div className="relative h-[400px] overflow-y-auto">
         <Table
           hoverable={true}
           style={{ height: "400px !important" }}
@@ -235,147 +235,171 @@ const Index = () => {
             ) : (
               <Fragment>
                 <Table.Row className="animate-pulse bg-white  dark:border-gray-700 dark:bg-gray-800 ">
-                  <Table.Cell className="!p-4 !pr-1 invisible">1</Table.Cell>
-                  <Table.Cell className="invisible whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
-                    Name
+                  <Table.Cell className="!p-4 !pr-1 ">
+                    <p className="w-4"></p>
                   </Table.Cell>
-                  <Table.Cell className="invisible">Name@gmail.com</Table.Cell>
-                  <Table.Cell className="invisible">00000000</Table.Cell>
-                  <Table.Cell className="invisible">0000</Table.Cell>
-                  <Table.Cell className="invisible">
+                  <Table.Cell className=" whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
                     <button
                       onClick={() => {}}
-                      className="font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
-                    >
-                      Edit
-                    </button>
+                      className=" font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
+                    ></button>
                     <button
                       className="font-medium text-blue-600 hover:underline dark:text-red-500"
                       onClick={() => {}}
                       disabled
-                    >
-                      Delete
-                    </button>
+                    ></button>
                   </Table.Cell>
                 </Table.Row>
                 <Table.Row className="animate-pulse bg-white  dark:border-gray-700 dark:bg-gray-800 ">
-                  <Table.Cell className="!p-4 !pr-1 invisible">1</Table.Cell>
-                  <Table.Cell className="invisible whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
-                    Name
+                  <Table.Cell className="!p-4 !pr-1 ">
+                    <p className="w-4"></p>
                   </Table.Cell>
-                  <Table.Cell className="invisible">Name@gmail.com</Table.Cell>
-                  <Table.Cell className="invisible">00000000</Table.Cell>
-                  <Table.Cell className="invisible">0000</Table.Cell>
-                  <Table.Cell className="invisible">
+                  <Table.Cell className=" whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
                     <button
                       onClick={() => {}}
-                      className="font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
-                    >
-                      Edit
-                    </button>
+                      className=" font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
+                    ></button>
                     <button
                       className="font-medium text-blue-600 hover:underline dark:text-red-500"
                       onClick={() => {}}
                       disabled
-                    >
-                      Delete
-                    </button>
+                    ></button>
                   </Table.Cell>
                 </Table.Row>
                 <Table.Row className="animate-pulse bg-white  dark:border-gray-700 dark:bg-gray-800 ">
-                  <Table.Cell className="!p-4 !pr-1 invisible">1</Table.Cell>
-                  <Table.Cell className="invisible whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
-                    Name
+                  <Table.Cell className="!p-4 !pr-1 ">
+                    <p className="w-4"></p>
                   </Table.Cell>
-                  <Table.Cell className="invisible">Name@gmail.com</Table.Cell>
-                  <Table.Cell className="invisible">00000000</Table.Cell>
-                  <Table.Cell className="invisible">0000</Table.Cell>
-                  <Table.Cell className="invisible">
+                  <Table.Cell className=" whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
                     <button
                       onClick={() => {}}
-                      className="font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
-                    >
-                      Edit
-                    </button>
+                      className=" font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
+                    ></button>
                     <button
                       className="font-medium text-blue-600 hover:underline dark:text-red-500"
                       onClick={() => {}}
                       disabled
-                    >
-                      Delete
-                    </button>
+                    ></button>
                   </Table.Cell>
                 </Table.Row>
                 <Table.Row className="animate-pulse bg-white  dark:border-gray-700 dark:bg-gray-800 ">
-                  <Table.Cell className="!p-4 !pr-1 invisible">1</Table.Cell>
-                  <Table.Cell className="invisible whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
-                    Name
+                  <Table.Cell className="!p-4 !pr-1 ">
+                    <p className="w-4"></p>
                   </Table.Cell>
-                  <Table.Cell className="invisible">Name@gmail.com</Table.Cell>
-                  <Table.Cell className="invisible">00000000</Table.Cell>
-                  <Table.Cell className="invisible">0000</Table.Cell>
-                  <Table.Cell className="invisible">
+                  <Table.Cell className=" whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
                     <button
                       onClick={() => {}}
-                      className="font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
-                    >
-                      Edit
-                    </button>
+                      className=" font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
+                    ></button>
                     <button
                       className="font-medium text-blue-600 hover:underline dark:text-red-500"
                       onClick={() => {}}
                       disabled
-                    >
-                      Delete
-                    </button>
+                    ></button>
                   </Table.Cell>
                 </Table.Row>
                 <Table.Row className="animate-pulse bg-white  dark:border-gray-700 dark:bg-gray-800 ">
-                  <Table.Cell className="!p-4 !pr-1 invisible">1</Table.Cell>
-                  <Table.Cell className="invisible whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
-                    Name
+                  <Table.Cell className="!p-4 !pr-1 ">
+                    <p className="w-4"></p>
                   </Table.Cell>
-                  <Table.Cell className="invisible">Name@gmail.com</Table.Cell>
-                  <Table.Cell className="invisible">00000000</Table.Cell>
-                  <Table.Cell className="invisible">0000</Table.Cell>
-                  <Table.Cell className="invisible">
+                  <Table.Cell className=" whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
                     <button
                       onClick={() => {}}
-                      className="font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
-                    >
-                      Edit
-                    </button>
+                      className=" font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
+                    ></button>
                     <button
                       className="font-medium text-blue-600 hover:underline dark:text-red-500"
                       onClick={() => {}}
                       disabled
-                    >
-                      Delete
-                    </button>
+                    ></button>
                   </Table.Cell>
                 </Table.Row>
                 <Table.Row className="animate-pulse bg-white  dark:border-gray-700 dark:bg-gray-800 ">
-                  <Table.Cell className="!p-4 !pr-1 invisible">1</Table.Cell>
-                  <Table.Cell className="invisible whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
-                    Name
+                  <Table.Cell className="!p-4 !pr-1 ">
+                    <p className="w-4"></p>
                   </Table.Cell>
-                  <Table.Cell className="invisible">Name@gmail.com</Table.Cell>
-                  <Table.Cell className="invisible">00000000</Table.Cell>
-                  <Table.Cell className="invisible">0000</Table.Cell>
-                  <Table.Cell className="invisible">
+                  <Table.Cell className=" whitespace-nowrap font-medium text-gray-900 dark:text-white capitalize">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
+                    <p className="w-4"></p>
+                  </Table.Cell>
+                  <Table.Cell className="">
                     <button
                       onClick={() => {}}
-                      className="font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
-                    >
-                      Edit
-                    </button>
+                      className=" font-medium text-blue-600 hover:underline dark:text-blue-500 mr-3"
+                    ></button>
                     <button
                       className="font-medium text-blue-600 hover:underline dark:text-red-500"
                       onClick={() => {}}
                       disabled
-                    >
-                      Delete
-                    </button>
+                    ></button>
                   </Table.Cell>
                 </Table.Row>
               </Fragment>
@@ -416,7 +440,7 @@ const Index = () => {
               }}
               enableReinitialize
               validationSchema={updateEmployeeSchema}
-              validateOnChange={false}
+              validateOnChange={true}
               validateOnBlur={false}
               onSubmit={(values, { setSubmitting }) => {
                 console.log("values : ", values);
@@ -431,102 +455,121 @@ const Index = () => {
                 }, 400);
               }}
             >
-              {(formik) => (
-                <form
-                  onSubmit={formik.handleSubmit}
-                  className="flex flex-col items-stretch"
-                >
-                  <div>
-                    <div className="mb-2 block">
-                      <Label htmlFor="name" value="Full Name" />
-                      {formik.touched.name && formik.errors.name ? (
-                        <span className="text-sm  font-bold text-red-400">
-                          {" * " + formik.errors.name}
-                        </span>
-                      ) : (
-                        ""
-                      )}
+              {(formik) => {
+                let disableValue =
+                  selectedRow.name === formik.values.name &&
+                  selectedRow.email === formik.values.email &&
+                  selectedRow.phonenumber === formik.values.phoneNumber &&
+                  selectedRow.salary === formik.values.salary;
+
+                return (
+                  <form
+                    onSubmit={formik.handleSubmit}
+                    className="flex flex-col items-stretch"
+                  >
+                    <div>
+                      <div className="mb-2 block">
+                        <Label htmlFor="name" value="Full Name" />
+                        {formik.touched.name && formik.errors.name ? (
+                          <span className="text-sm  font-bold text-red-400">
+                            {" * " + formik.errors.name}
+                          </span>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                      <TextInput
+                        id="name"
+                        type="text"
+                        placeholder="jack jony"
+                        value={formik.values.name}
+                        onChange={formik.handleChange}
+                        {...formik.getFieldProps("name")}
+                      />
                     </div>
-                    <TextInput
-                      id="name"
-                      type="text"
-                      placeholder="jack jony"
-                      value={formik.values.name}
-                      onChange={formik.handleChange}
-                      {...formik.getFieldProps("name")}
-                    />
-                  </div>
-                  <div>
-                    <div className="mb-2 block">
-                      <Label htmlFor="phoneNumber" value="Phone Number" />
-                      {formik.touched.phoneNumber &&
-                      formik.errors.phoneNumber ? (
-                        <span className="text-sm  font-bold text-red-400">
-                          {" * " + formik.errors.phoneNumber}
-                        </span>
-                      ) : (
-                        ""
-                      )}
+                    <div>
+                      <div className="mb-2 block">
+                        <Label htmlFor="phoneNumber" value="Phone Number" />
+                        {formik.touched.phoneNumber &&
+                        formik.errors.phoneNumber ? (
+                          <span className="text-sm  font-bold text-red-400">
+                            {" * " + formik.errors.phoneNumber}
+                          </span>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                      <TextInput
+                        id="phoneNumber"
+                        type="number"
+                        placeholder="71283827"
+                        value={formik.values.phoneNumber}
+                        onChange={formik.handleChange}
+                        {...formik.getFieldProps("phoneNumber")}
+                      />
                     </div>
-                    <TextInput
-                      id="phoneNumber"
-                      type="number"
-                      placeholder="71283827"
-                      value={formik.values.phoneNumber}
-                      onChange={formik.handleChange}
-                      {...formik.getFieldProps("phoneNumber")}
-                    />
-                  </div>
-                  <div>
-                    <div className="mb-2 block">
-                      <Label htmlFor="email" value="Email" />
-                      {formik.touched.email && formik.errors.email ? (
-                        <span className="text-sm  font-bold text-red-400">
-                          {" * " + formik.errors.email}
-                        </span>
-                      ) : (
-                        ""
-                      )}
+                    <div>
+                      <div className="mb-2 block">
+                        <Label htmlFor="email" value="Email" />
+                        {formik.touched.email && formik.errors.email ? (
+                          <span className="text-sm  font-bold text-red-400">
+                            {" * " + formik.errors.email}
+                          </span>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                      <TextInput
+                        id="email"
+                        type="text"
+                        formNoValidate={true}
+                        placeholder="jack100@gmail.com"
+                        value={formik.values.email}
+                        onChange={formik.handleChange}
+                        {...formik.getFieldProps("email")}
+                      />
                     </div>
-                    <TextInput
-                      id="email"
-                      type="text"
-                      formNoValidate={true}
-                      placeholder="jack100@gmail.com"
-                      value={formik.values.email}
-                      onChange={formik.handleChange}
-                      {...formik.getFieldProps("email")}
-                    />
-                  </div>
-                  <div>
-                    <div className="mb-2 block">
-                      <Label htmlFor="salary" value="Salary" />
-                      {formik.touched.salary && formik.errors.salary ? (
-                        <span className="text-sm  font-bold text-red-400">
-                          {" * " + formik.errors.salary}
-                        </span>
-                      ) : (
-                        ""
-                      )}
+                    <div>
+                      <div className="mb-2 block">
+                        <Label htmlFor="salary" value="Salary" />
+                        {formik.touched.salary && formik.errors.salary ? (
+                          <span className="text-sm  font-bold text-red-400">
+                            {" * " + formik.errors.salary}
+                          </span>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                      <TextInput
+                        id="salary"
+                        type="number"
+                        formNoValidate={true}
+                        placeholder="900"
+                        value={formik.values.salary}
+                        onChange={formik.handleChange}
+                        {...formik.getFieldProps("salary")}
+                      />
                     </div>
-                    <TextInput
-                      id="salary"
-                      type="number"
-                      formNoValidate={true}
-                      placeholder="900"
-                      value={formik.values.salary}
-                      onChange={formik.handleChange}
-                      {...formik.getFieldProps("salary")}
-                    />
-                  </div>
-                  <div className="flex gap-4 text-gray-200 text-md my-4 w-fit  py-2  rounded-xl">
-                    <Button type={"submit"}>Submit</Button>
-                    <Button color="gray" onClick={() => setShowModal(false)}>
-                      Decline
-                    </Button>
-                  </div>
-                </form>
-              )}
+                    <div className="flex gap-4 text-gray-200 text-md my-4 w-fit  py-2  rounded-xl">
+                      <Button
+                        type={"submit"}
+                        disabled={disableValue ? true : false}
+                      >
+                        Submit
+                      </Button>
+                      <Button
+                        color="gray"
+                        onClick={() => {
+                          setShowModal(false);
+                          setSelectedRow({});
+                        }}
+                      >
+                        Decline
+                      </Button>
+                    </div>
+                  </form>
+                );
+              }}
             </Formik>
           </div>
         </Modal.Body>
