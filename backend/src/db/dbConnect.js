@@ -2,10 +2,10 @@ const { Pool } = require("pg");
 
 var dbConnection = new Pool({
   user: "postgres",
-  host: "localhost",
+  host: "ozlynk.c73fiaf3uw7l.eu-north-1.rds.amazonaws.com",
   database: "postgres",
-  password: "postgres",
-  port: 5432,
+  password: "Ozlynk#123456",
+  port: 1521,
   max: 30,
   min: 0,
   connectionTimeoutMillis: 2000,
